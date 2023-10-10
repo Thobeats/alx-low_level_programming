@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * main - Entry Point of the whole Script
@@ -11,6 +12,15 @@
 
 int main(void)
 {
-	printf("_putchar\n");
+	char message[] = "_putchar\n";
+	int i;
+
+	i = 0;
+	while (i < (int)sizeof(message))
+	{
+		_putchar(message[i]);
+		i++;
+	}
+
 	return (0);
 }
