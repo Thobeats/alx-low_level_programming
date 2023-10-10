@@ -12,15 +12,15 @@
 
 int main(void)
 {
-	char message[] = "_putchar\n";
+	char message[] = "putchar\n";
 	int i;
 
 	i = 0;
+	_putchar('_');
 	while (i < (int)sizeof(message))
 	{
 		_putchar(message[i]);
 		i++;
 	}
-
 	return (0);
 }
