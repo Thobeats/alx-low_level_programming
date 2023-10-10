@@ -12,7 +12,7 @@
 
 int main(void)
 {
-	char message[] = "_putchar\n";
+	char message[] = "_putchar";
 	int i;
 
 	i = 0;
