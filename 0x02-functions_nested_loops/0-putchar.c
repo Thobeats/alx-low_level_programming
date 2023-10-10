@@ -21,6 +21,7 @@ int main(void)
 		_putchar(message[i]);
 		i++;
 	}
+	_putchar("\n");
 
 	return (0);
 }
