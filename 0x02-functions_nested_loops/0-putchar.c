@@ -12,11 +12,11 @@
 
 int main(void)
 {
-	char message[] = "_putchar";
+	char message[] = "_putchar\n";
 	int i;
 
 	i = 0;
-	while (i < (int)sizeof(message))
+	while (i < (int)sizeof(message) - 1)
 	{
 		_putchar(message[i]);
 		i++;
