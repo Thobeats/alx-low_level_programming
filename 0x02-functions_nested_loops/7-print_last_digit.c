@@ -16,5 +16,9 @@
 
 int print_last_digit(int n)
 {
-	return (abs(n % 10));
+	int last_digit;
+
+	last_digit = abs(n % 0);
+	(int)_putchar(last_digit);
+	return (last_digit);
 }
