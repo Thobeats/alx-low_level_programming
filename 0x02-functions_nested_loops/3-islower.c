@@ -3,7 +3,9 @@
 #include "main.h"
 
 /**
- * is_lower - Verifies if a character is a lower case letter or not
+ * _islower - Verifies if a character is a lower case letter or not
+ *
+ * @c: character to check
  *
  * Return: 1 if character is lowercase, 0 if its false
  *
