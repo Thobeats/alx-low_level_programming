@@ -22,7 +22,7 @@ void print_to_98(int n)
 				_putchar('0' + (n / 100));
 				_putchar('0' + ((n / 10) % 10));
 			}
-			else if (n > 10)
+			else if (n >= 10)
 			{
 				_putchar('0' + (n / 10));
 			}
@@ -45,7 +45,7 @@ void print_to_98(int n)
 				_putchar('0' + (n / 100));
 				_putchar('0' + ((n / 10) % 10));
 			}
-			else if (n > 10)
+			else if (n >= 10)
 			{
 				_putchar('0' + (n / 10));
 			}
