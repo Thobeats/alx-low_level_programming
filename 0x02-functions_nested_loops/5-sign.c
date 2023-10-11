@@ -7,7 +7,7 @@
  *
  * @n: number to check
  *
- * Return: 1 if number is greater than zero, 0 if the number is zero and -1  the number is less than zero
+ * Return: 1 if n > zero,0 n = zero and -1 the n < zero
  *
  */
 
