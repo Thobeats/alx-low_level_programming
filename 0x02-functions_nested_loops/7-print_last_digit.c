@@ -3,11 +3,11 @@
 #include "main.h"
 
 /**
- * _abs - Verifies the absolute value of an integer
+ * last_digit - Prints the last digit of an integer
  *
  * @n: integer to check
  *
- * Return: the absolute value of the integer
+ * Return: the last digit of the integer
  *
  *
  *
@@ -19,9 +19,7 @@ int print_last_digit(int n)
 	int last_digit;
 
 	if (n < 0)
-	{
 		n = -n;
-	}
 
 	last_digit = n % 10;
 	_putchar('0'+ last_digit);
