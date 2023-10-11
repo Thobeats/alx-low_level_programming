@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * last_digit - Prints the last digit of an integer
+ * print_last_digit - Prints the last digit of an integer
  *
  * @n: integer to check
  *
@@ -22,6 +22,6 @@ int print_last_digit(int n)
 		n = -n;
 
 	last_digit = n % 10;
-	_putchar('0'+ last_digit);
+	_putchar('0' + last_digit);
 	return (last_digit);
 }
