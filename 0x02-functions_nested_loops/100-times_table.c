@@ -3,6 +3,8 @@
 
 /**
  * print_times_table - Prints the times table of n
+ * 
+ * @n: integer reference
  *
  * Return: nothing
  *
