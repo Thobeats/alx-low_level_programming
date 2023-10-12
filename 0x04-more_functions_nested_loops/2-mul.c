@@ -18,7 +18,7 @@ int mul(int a, int b)
 	if ((a >= '0' && a <= '9') && (b >= '0' && b <= '9'))
 	{
 		result = a * b;
-		if (result > 99)
+		/*if (result > 99)
 		{
 			_putchar('0' + (result / 100));
 			_putchar('0' + (result / 10) % 10);
@@ -28,6 +28,8 @@ int mul(int a, int b)
 			_putchar('0' + (result / 10));
 		}
 			_putchar('0' + (result % 10));
+		*/
+		printf("%d",result);
 	}
 
 	return (0);
