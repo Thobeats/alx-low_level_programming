@@ -42,6 +42,6 @@ int mul(int a, int b)
 			i--;
 			_putchar(buffer[i]);
 		}
-	}	
+	}
 	return (0);
 }
