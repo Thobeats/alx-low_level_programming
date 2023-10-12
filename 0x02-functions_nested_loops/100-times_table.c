@@ -3,7 +3,7 @@
 
 /**
  * print_times_table - Prints the times table of n
- * 
+ *
  * @n: integer reference
  *
  * Return: nothing
@@ -31,7 +31,8 @@ void print_times_table(int n)
 					_putchar(' ');
 					_putchar('0' + (res / 10));
 				}
-				else if (j > 0)
+				
+				if (j > 0)
 				{
 					_putchar(' ');
 				}
@@ -39,6 +40,7 @@ void print_times_table(int n)
 				if (j < n)
 				{
 					_putchar(',');
+					_putchar(' ');
 					_putchar(' ');
 				}
 			}
