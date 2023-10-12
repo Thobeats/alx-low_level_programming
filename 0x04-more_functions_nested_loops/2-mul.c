@@ -14,23 +14,34 @@
 int mul(int a, int b)
 {
 	int result;
+	char buffer[20];
+	int i = 0;
 
-	if ((a >= '0' && a <= '9') && (b >= '0' && b <= '9'))
+	result = a * b;
+	if (result < 0)
 	{
-		result = a * b;
-		/*if (result > 99)
-		{
-			_putchar('0' + (result / 100));
-			_putchar('0' + (result / 10) % 10);
-		}
-		else if (result > 10)
-		{
-			_putchar('0' + (result / 10));
-		}
-			_putchar('0' + (result % 10));
-		*/
-		printf("%d",result);
+		_putchar('-');
+		result = -result;
 	}
 
+	if (result == 0)
+	{
+		_putchar('0');
+	}
+	else
+	{
+		while (result > 0)
+		{
+			buffer[i] = '0' + (result % 10);
+			result /= 10;
+			i++;
+		}
+
+		while (i > 0)
+		{
+			i--;
+			_putchar(buffer[i]);
+		}
+	}	
 	return (0);
 }
