@@ -26,7 +26,7 @@ int main(void)
 			if (number == 1)
 			{
 				/* We have found the highest factor */
-				printf("%ld is the highest factor\n", maxFactor);
+				printf("%ld\n", maxFactor);
 				break;
 			}
 		}
