@@ -3,7 +3,7 @@
 /**
  * print_diagonal - Prints a diagonal line
  *
- * @n - integer determining the length of the line
+ * @n: integer determining the length of the line
  *
  * Return: void
  *
