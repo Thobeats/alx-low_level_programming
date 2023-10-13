@@ -3,7 +3,7 @@
 /**
  * print_line - Prints line on the terminal
  *
- * @c: integer determining the number of lines
+ * @n: integer determining the number of lines
  *
  * Return: void
  *
