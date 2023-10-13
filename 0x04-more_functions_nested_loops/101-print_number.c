@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - Print integers
+ * print_number - Print integers
  *
  * @n: Integer to consider
  *
@@ -19,7 +19,7 @@ void print_number(int n)
 	}
 
 	temp = n;
-	
+
 	if (n == 0)
 	{
 		_putchar('0');
@@ -37,5 +37,5 @@ void print_number(int n)
 			_putchar('0' + ((n / div) % 10));
 			div /= 10;
 		}
-	}	
+	}
 }
