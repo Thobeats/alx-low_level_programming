@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - Updates the value of reference to 98
+ * reset_to_98 - Updates the value of reference to 98
  *
  * @n: Pointer
  *
