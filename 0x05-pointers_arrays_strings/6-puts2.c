@@ -20,7 +20,7 @@ void puts2(char *str)
 			break;
 		else
 		{
-			printf("%c", str[j]);
+			printf("%c", str[i]);
 			i += 2;
 		}
 	}
