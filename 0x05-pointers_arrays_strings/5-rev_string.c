@@ -12,9 +12,9 @@
 
 void rev_string(char *s)
 {
-	int length = 0;
+	int length = strlen(s);
 	int i;
-	char reverse[20];
+	char reverse[length + 1];
 
 	while (s[length] != '\0')
 	{
@@ -26,5 +26,7 @@ void rev_string(char *s)
 		reverse[i] = s[i];
 	}
 
-	*s = reverse;
+	reverse[length] = '\0';
+
+	strcpy(s, reverse);
 }
