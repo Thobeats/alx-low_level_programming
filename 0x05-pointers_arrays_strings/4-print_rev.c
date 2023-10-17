@@ -26,6 +26,4 @@ void print_rev(char *s)
 	}
 
 	putchar('\n');
-
-	return (length);
 }
