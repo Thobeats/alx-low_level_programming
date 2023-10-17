@@ -13,13 +13,16 @@
 void puts2(char *str)
 {
 	int i = 0;
-	int j = 0;
 
 	while (str[i] != '\0')
 	{
-		printf("%c", str[j]);
-		i++;
-		j += 2;
+		if (str[i + 1] == '\0')
+			break;
+		else
+		{
+			printf("%c", str[j]);
+			i += 2;
+		}
 	}
 
 	putchar('\n');
