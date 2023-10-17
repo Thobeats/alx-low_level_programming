@@ -17,7 +17,10 @@ void puts2(char *str)
 	while (str[i] != '\0')
 	{
 		if (str[i + 1] == '\0')
+		{
+			printf("%c", str[i]);
 			break;
+		}
 		else
 		{
 			printf("%c", str[i]);
