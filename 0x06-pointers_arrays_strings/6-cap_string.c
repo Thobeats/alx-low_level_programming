@@ -11,7 +11,6 @@
 char *cap_string(char *str)
 {
 	char seperators[] = "\t \n,.;!?\"(){}";
-	/**int isSeperator;*/
 	int i;
 	char *ptr = str;
 
@@ -22,7 +21,6 @@ char *cap_string(char *str)
 			if (*ptr == seperators[i])
 			{
 				ptr++;
-				/**isSeperator = 1;*/
 				if (*ptr + 1 >= 'a' && *ptr + 1 <= 'z')
 				{
 					*ptr = *ptr - 32;
@@ -32,21 +30,6 @@ char *cap_string(char *str)
 					ptr--;
 				}
 			}
-			else
-			{
-				/**isSeperator  = 0;*/
-			}
-
-			/**if (isSeperator)
-			{
-				ptr++;
-				if (*ptr >= 'a' && *ptr <= 'z')
-				{
-					*ptr = *ptr - 32;
-				}
-				else
-					ptr++;
-			}*/
 		}
 
 		ptr++;
