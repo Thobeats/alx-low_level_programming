@@ -8,7 +8,7 @@
  * Return: uppercase character
  */
 
-char *string_toupper(char *str);
+char *string_toupper(char *str)
 {
 	char *ptr = str;
 
