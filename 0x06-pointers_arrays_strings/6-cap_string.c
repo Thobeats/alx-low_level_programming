@@ -11,7 +11,7 @@
 char *cap_string(char *str)
 {
 	char seperators[] = " \t\n,.;!?\"(){}";
-	bool isSeperator;
+	int isSeperator;
 	int i;
 	char *ptr = str;
 
