@@ -14,6 +14,12 @@ char *cap_string(char *str)
 	int i;
 	char *ptr = str;
 
+	if (*ptr >= 'a' && *ptr <= 'z')
+	{
+		*ptr = *ptr - 32;
+	}
+
+
 	while (*ptr)
 	{
 		for (i = 0; seperators[i] != '\0'; i++)
