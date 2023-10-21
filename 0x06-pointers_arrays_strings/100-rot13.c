@@ -12,7 +12,6 @@ char *rot13(char *str)
 {
 	char lowercase[] = "abcdefghijklm";
 	char uppercase[] = "ABCDEFGHIJKLM";
-	char code[] = "43071";
 	int i;
 	char *ptr = str;
 
