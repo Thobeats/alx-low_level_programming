@@ -11,7 +11,7 @@
 char *rot13(char *str)
 {
 	char lowercase[] = "abcdefghijklmnopqrstuvqxyz";
-	/*char uppercase[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";*/
+	char uppercase[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	int i;
 	char *ptr = str;
 
@@ -19,7 +19,7 @@ char *rot13(char *str)
 	{
 		for (i = 0; lowercase[i] != '\0'; i++)
 		{
-			if (*ptr == lowercase[i])
+			if (*ptr == lowercase[i] || *ptr == uppercase[i])
 			{
 				*ptr = ((*ptr - 'a' + 13) % 26) + 'a';
 			}
