@@ -20,7 +20,9 @@ char *rot13(char *str)
 		for (i = 0; lowercase[i] != '\0'; i++)
 		{
 			if (*ptr == lowercase[i] || *ptr == uppercase[i])
+			{
 				*ptr = *ptr + 13;
+			}
 			else
 			{
 				*ptr = *ptr - 13;
