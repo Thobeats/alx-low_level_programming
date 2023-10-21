@@ -10,18 +10,19 @@
 
 char *rot13(char *str)
 {
-	char lowercase[] = "abcdefghijklmnopqrstuvqxyz";
-	char uppercase[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char alphabets[] = "abcdefghijklmnopqrstuvqxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char coded[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	int i;
 	char *ptr = str;
 
 	while (*ptr)
 	{
-		for (i = 0; lowercase[i] != '\0'; i++)
+		for (i = 0; alphabets[i] != '\0'; i++)
 		{
-			if (*ptr == lowercase[i] || *ptr == uppercase[i])
+			if (*ptr == alphabets[i])
 			{
-				*ptr = ((*ptr - 'a' + 13) % 26) + 'a';
+				/**ptr = ((*ptr - 'A' + 13) % 26) + 'A';*/
+				*ptr = coded[i];
 			}
 		}
 
