@@ -11,7 +11,7 @@
 char *rot13(char *str)
 {
 	char lowercase[] = "abcdefghijklmnopqrstuvqxyz";
-	char uppercase[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	/*char uppercase[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";*/
 	int i;
 	char *ptr = str;
 
