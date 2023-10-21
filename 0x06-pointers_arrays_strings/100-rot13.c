@@ -10,20 +10,18 @@
 
 char *rot13(char *str)
 {
+	char alpha[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char coded[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	int i;
 	char *ptr = str;
 
 	while (*ptr)
 	{
-		for (i = 0; str[i] != '\0'; i++)
+		for (i = 0; alpha[i] != '\0'; i++)
 		{
-			if (*ptr <= 'A' && *ptr >= 'Z')
+			if (*ptr == alpha[i])
 			{
-				*ptr = ((*ptr - 'A' + 13) % 26) + 'A';
-			}
-			else
-			{
-				*ptr = ((*ptr - 'a' + 13) % 26) + 'a';
+				*ptr = coded[i];
 			}
 		}
 
