@@ -22,7 +22,7 @@ char *rot13(char *str)
 			if (*ptr == lowercase[i])
 			{
 				*ptr = ((*ptr - 'a' + 13) % 26) + 'a';
-			}	
+			}
 		}
 
 		ptr++;
