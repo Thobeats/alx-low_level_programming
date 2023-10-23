@@ -7,7 +7,7 @@
  * @b: new value
  * @n: the amount of memory space to be used
  *
- * Returns: the reassigned pointer 
+ * Return: the reassigned pointer 
  *
  */
 
