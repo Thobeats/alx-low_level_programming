@@ -22,6 +22,26 @@ int is_palindrome_check(char *s, int start, int end)
 }
 
 /**
+ * _strlen - Calculates the string length
+ *
+ * @s: the string
+ *
+ * Return: string length
+ *
+ */
+
+int _strlen(char *s)
+{
+	if (*s)
+	{
+		s++;
+		return (1 + _strlen(s));
+	}
+
+	return (0);
+}
+
+/**
  * is_palindrome - Confirms a palindrome string
  *
  * @s: the string
@@ -31,7 +51,7 @@ int is_palindrome_check(char *s, int start, int end)
 
 int is_palindrome(char *s)
 {
-	int length = strlen(s);
+	int length = _strlen(s);
 
 	return (is_palindrome_check(s, 0, length - 1));
 }
