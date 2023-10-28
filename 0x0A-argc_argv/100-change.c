@@ -31,6 +31,7 @@ int main(int argc, char *argv[])
 		change = atoi(argv[1]);
 
 		coins = 0;
+		coins += calc_change(&change, 25);
 		coins += calc_change(&change, 10);
 		coins += calc_change(&change, 5);
 		coins += calc_change(&change, 2);
