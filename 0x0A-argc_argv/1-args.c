@@ -4,7 +4,7 @@
  * main - Prints the number of arguments
  *
  * @argc: argument count
- * @argv: argument array
+ * @argv: an array of the argumentsi
  *
  * Return: 0 for success
  *
@@ -13,7 +13,7 @@
 
 int main(int argc, char *argv[])
 {
-	printf("%d\n", argc);
+	printf("no of args in %s is %d\n", argv[0], argc - 1);
 
 	return (0);
 
