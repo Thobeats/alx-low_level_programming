@@ -13,7 +13,8 @@
 
 int main(int argc, char *argv[])
 {
-	printf("no of args in %s is %d\n", argv[0], argc - 1);
+	void(argv);
+	printf("%d\n", argc - 1);
 
 	return (0);
 
