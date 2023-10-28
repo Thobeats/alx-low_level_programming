@@ -1,4 +1,4 @@
-#include "main."
+#include "main.h"
 
 /**
  * main - Prints the minimum number of coins to make change
@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	int change;
 	int coins;
 
-	if (args != 2)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
