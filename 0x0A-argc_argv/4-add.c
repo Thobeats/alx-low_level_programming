@@ -15,18 +15,21 @@ int main(int argc, char *argv[])
 {
 	int a;
 	int b;
+	int c;
 
 	if (argc <= 1)
 		printf("%d\n", 0);
 	else if (argc > 1)
 	{
-
 		for (a = 1; a < argc; a++)
 		{
-			if (isdigit(argv[a]) == 0)
+			for (c = 0; argv[a][c]; c++)
 			{
-				printf("Error\n");
-				return (1);
+				if (isdigit(argv[a][c]) == 0)
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
 
 			b += atoi(argv[a]);
