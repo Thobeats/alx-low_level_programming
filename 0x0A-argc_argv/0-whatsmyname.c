@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _myname - Prints the name of the file
+ * main - Prints the name of the file
  *
  * @argc: argument count
  * @argv: argument array
@@ -11,7 +11,7 @@
  *
  */
 
-int _myname(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	if (argc > 0)
 	{
