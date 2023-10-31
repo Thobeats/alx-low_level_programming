@@ -6,6 +6,5 @@
 #include <ctype.h>
 
 int _putchar(char c);
-int calc_change(int *change, int cents);
-int _myname(int argc, char *argv[]);
+char *create_array(unsigned int size, char c);
 #endif /* MAIN_H */
