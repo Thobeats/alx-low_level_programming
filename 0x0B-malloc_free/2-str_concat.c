@@ -16,30 +16,26 @@ char *str_concat(char *s1, char *s2)
 	char *concatStr;
 	int len1;
 	int len2;
-	int tLength;
 
 	/**get the length of the two strings*/
 	len1 = 0;
 	len2 = 0;
-	while (s1[len1])
-	{
+
+	if (s1 == NULL)
+		s1 = "";
+
+	if (s2 == NULL)
+		s2 = "";
+
+	while (s1[len1] != '\0')
 		len1++;
-	}
 
-	while (s2[len2])
-	{
+	while (s2[len2] != '\0')
 		len2++;
-	}
-
-	tLength = len1 + len2;
-
 	/** Allocate the space*/
-	concatStr = (char *)malloc(sizeof(char) * (tLength + 1));
-
+	concatStr = (char *)malloc(sizeof(char) * (len1 + len2 + 1));
 	if (concatStr == NULL)
-	{
 		return (NULL);
-	}
 
 	i = 0;
 	while (s1[i])
@@ -47,7 +43,6 @@ char *str_concat(char *s1, char *s2)
 		concatStr[i] = s1[i];
 		i++;
 	}
-
 	j = 0;
 	while (s2[j])
 	{
@@ -55,7 +50,5 @@ char *str_concat(char *s1, char *s2)
 		j++;
 		i++;
 	}
-	
 	return (concatStr);
-
 }
