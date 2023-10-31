@@ -15,7 +15,7 @@ char *_strdup(char *str)
 	char *newString;
 
 	/** Return null if the str is null*/
-	if (*str == NULL)
+	if (*str == '\0')
 		return (NULL);
 
 	/**get the length of the string and use it as the size*/
