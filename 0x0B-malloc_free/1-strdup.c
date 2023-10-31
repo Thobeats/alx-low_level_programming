@@ -10,18 +10,32 @@
 
 char *_strdup(char *str)
 {
-	unsigned int i;
-	char *newArray =i (char *) malloc(sizeof(char) * size);
+	int i;
+	char *newString;
 
-	if (size == 0 || newArray == NULL)
+	/** Return null if the str is null*/
+	if (str == '\0')
+			return (0);
+
+	/**get the length of the string and use it as the size*/
+	for (i = 0; str[i]; i++)
 	{
-		return (NULL);
+		continue;
 	}
 
-	for (i = 0; i < size; i++)
+	newString = (char *) malloc(sizeof(char) * (i + 1));
+
+	if (newString == '\0')
+			return (0);
+
+	/** Copy the old string into the new string */
+	while (*str)
 	{
-		newArray[i] = c;
+		*newString == *str;
+
+		str++;
 	}
 
-	return (newArray);
+	return (newString);
+
 }
