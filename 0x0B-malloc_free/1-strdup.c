@@ -15,8 +15,8 @@ char *_strdup(char *str)
 	char *newString;
 
 	/** Return null if the str is null*/
-	if (*str == '\0')
-		return (0);
+	if (*str == NULL)
+		return (NULL);
 
 	/**get the length of the string and use it as the size*/
 	len = 0;
@@ -26,7 +26,7 @@ char *_strdup(char *str)
 	newString = (char *)malloc(sizeof(char) * (len + 1));
 
 	if (newString == NULL)
-		return (0);
+		return (NULL);
 
 	/** Copy the old string into the new string */
 	for (i = 0; i < len; i++)
