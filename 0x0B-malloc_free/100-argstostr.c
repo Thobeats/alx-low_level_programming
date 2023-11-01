@@ -22,37 +22,25 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
+		if (av[i] == '\0')
+			return (0);
 		for (j = 0; av[i][j]; j++)
-		{
 			continue;
-		}
-
 		length += j + 1;
 	}
-
 	avmalloc = (char *)malloc((sizeof(char) * length) + 1);
-
 	if (avmalloc == NULL)
 		return (NULL);
-
 	i = 0;
 	k = 0;
 	while (i < ac)
 	{
 		for (j = 0; av[i][j]; j++, k++)
-		{
 			avmalloc[k] = av[i][j];
-		}
-
 		avmalloc[k] = '\n';
-
 		if (i == (ac - 1))
-		{
 			avmalloc[k + 1] = '\0';
-		}
-
 		i++;
 	}
-
 	return (avmalloc);
 }
