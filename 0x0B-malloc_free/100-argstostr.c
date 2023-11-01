@@ -51,7 +51,6 @@ char *argstostr(int ac, char **av)
 			avmalloc[k + 1] = '\0';
 		}
 
-		k++;
 		i++;
 	}
 
