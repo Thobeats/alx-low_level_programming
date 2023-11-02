@@ -2,22 +2,21 @@
 
 /**
  * malloc_checked - Allocates memory using malloc
- * 
+ *
  * @b: desired memory size
- * 
+ *
  * Return: pointer to the allocated memory
 */
 
 void *malloc_checked(unsigned int b)
 {
-    void *ptr;
+	void *ptr;
 
-    ptr = malloc(b);
+	ptr = malloc(b);
 
-    if (ptr == NULL)
-    {
-        exit(98);
-    }
-
-    return (ptr);
+	if (ptr == NULL)
+	{
+		exit(98);
+	}
+	return (ptr);
 }
