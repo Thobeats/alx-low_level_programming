@@ -48,10 +48,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 /**
  * _slen - Calculates the strings length
  * @s: the string
- * 
+ *
  * Return: the length of the string
- * 
-*/
+ *
+ */
 
 unsigned int _slen(char *s)
 {
@@ -62,5 +62,6 @@ unsigned int _slen(char *s)
 		continue;
 	}
 
-	return i;
+	return (i);
 }
+
