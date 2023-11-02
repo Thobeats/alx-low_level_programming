@@ -11,13 +11,14 @@ int main(void)
 {
     char *s;
 
-    s = _strdup("");
+    s = str_concat(NULL, "Holberton");
     if (s == NULL)
     {
-        printf("failed to allocate memory\n");
+        printf("failed\n");
         return (1);
     }
     printf("%s\n", s);
     free(s);
+
     return (0);
 }

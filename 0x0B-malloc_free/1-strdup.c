@@ -11,30 +11,27 @@
 char *_strdup(char *str)
 {
 	int i;
+	int len;
 	char *newString;
 
 	/** Return null if the str is null*/
-	if (*str == '\0')
-		return (0);
+	if (str == NULL)
+		return (NULL);
 
 	/**get the length of the string and use it as the size*/
-	for (i = 0; str[i]; i++)
-	{
-		continue;
-	}
+	len = 0;
+	while (str[len] != '\0')
+		len++;
 
-	newString = malloc(sizeof(char) * (i + 1));
+	newString = (char *)malloc(sizeof(char) * (len + 1));
 
-	if (*newString == '\0')
-		return (0);
+	if (newString == NULL)
+		return (NULL);
 
 	/** Copy the old string into the new string */
-	while (*str)
+	for (i = 0; i < len; i++)
 	{
-		*newString = *str;
-
-		str++;
-		newString++;
+		newString[i] = str[i];
 	}
 
 	return (newString);
