@@ -22,10 +22,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	i = strlen(s1);
+	i = _slen(s1);
 
-	if (n >= strlen(s2))
-		i += strlen(s2);
+	if (n >= _slen(s2))
+		i += _slen(s2);
 	else
 		i += n;
 
@@ -43,4 +43,24 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	ptr[i] = '\0';
 
 	return (ptr);
+}
+
+/**
+ * _slen - Calculates the strings length
+ * @s: the string
+ * 
+ * Return: the length of the string
+ * 
+*/
+
+int _slen(char *s)
+{
+	int i;
+
+	for (i = 0; s[i]; i++)
+	{
+		continue;
+	}
+
+	return i;
 }
