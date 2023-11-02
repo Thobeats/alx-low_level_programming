@@ -6,8 +6,6 @@
  * @b: desired memory size
  * 
  * Return: pointer to the allocated memory
- * 
- * 
 */
 
 void *malloc_checked(unsigned int b)
