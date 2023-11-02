@@ -53,9 +53,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
  * 
 */
 
-int _slen(char *s)
+unsigned int _slen(char *s)
 {
-	int i;
+	unsigned int i;
 
 	for (i = 0; s[i]; i++)
 	{
