@@ -1,5 +1,4 @@
 #include "dog.h"
-#define NULL 0;
 
 /**
  * print_dog - Prints the details of the dog struct
