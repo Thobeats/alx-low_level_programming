@@ -1,0 +1,18 @@
+#include "dog.h"
+
+/**
+ * init_dog - creates an instance if a dog struct
+ *
+ * @d: The dog struct address
+ * @name: The dog name
+ * @age: The dog age
+ * @owner: The dog owner
+ *
+ *
+ * Return: void
+ */
+
+void init_dog(struct dog *d, char *name, float age, char *owner)
+{
+	d{name, age, owner};
+}
