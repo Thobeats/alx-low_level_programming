@@ -1,4 +1,5 @@
 #include "dog.h"
+#define NULL 0
 
 /**
  * init_dog - creates an instance if a dog struct
