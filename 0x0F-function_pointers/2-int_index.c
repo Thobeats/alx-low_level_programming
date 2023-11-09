@@ -1,14 +1,12 @@
-#define NULL 0
 #include <stdlib.h>
 
 /**
- * int_index - searches for an integer using an array
+ * int_index - passes array of ints thru functions to determine 1st TRUE value
+ * @array: input array of ints to use as function parameters
+ * @size: size of int array
+ * @cmp: pointer to function to compare int values
  *
- * @array: the array
- * @size: the array size
- * @cmp: the function
- *
- * Return: -1 on failed, index of the integer on success
+ * Return: index of array for 1st occurance of where cmp does not return FALSE
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
@@ -17,19 +15,13 @@ int int_index(int *array, int size, int (*cmp)(int))
 
 	if (size <= 0)
 		return (-1);
-
 	if (array != NULL && cmp != NULL)
 	{
 		for (i = 0; i < size; i++)
-		{
 			if ((*cmp)(array[i]) != 0)
 				return (i);
-			
-			return (-1);
-		}
+		return (-1);
 	}
-	
-	return (-1);
-
+	else
+		return (-1);
 }
-
