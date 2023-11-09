@@ -4,18 +4,18 @@
 #include <string.h>
 
 /**
- * main - perform input operation of two ints using input operator
- * @argc: number of input arguments
+ * main - perform input operation
  *
+ * @argc: number of input arguments
  * @argv: array of arguments
  *
- * Return: int result of performing operation or error if unable to compute
+ * Return: error if failed, result on success
  */
 
 int main(int argc, char *argv[])
 {
-	int a, b;
-
+	int a;
+	int b;
 	int (*f)(int, int);
 
 	if (argc != 4)
@@ -25,6 +25,7 @@ int main(int argc, char *argv[])
 	}
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
+
 	if (b == 0 && (strcmp("/", argv[2]) == 0 || strcmp("%", argv[2]) == 0))
 	{
 		printf("Error\n");
