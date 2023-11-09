@@ -12,7 +12,7 @@
 
 int main(int argc, char *argv[])
 {
-	int x;
+	int i, x;
 
 	if (argc != 2)
 	{
@@ -25,5 +25,15 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
+
+	for (i = 0; i < n; i++)
+	{
+		printf("%02hhx", *((char *)main + i));
+		if (i < n - 1)
+			printf(" ");
+		else
+			printf("\n");
+	}
+
 	return (0);
 }
