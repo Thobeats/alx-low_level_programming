@@ -51,7 +51,7 @@ int op_mul(int a, int b)
  * @a: arg 1
  * @b: arg 2
  *
- * Returns: The division between the two args
+ * Return: The division between the two args
  */
 
 int op_div(int a, int b)
