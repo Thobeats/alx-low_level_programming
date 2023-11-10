@@ -5,7 +5,7 @@
  * print_numbers - print all integers
  *
  * @separator: string to print in between the numbers
- * @n: the number of integers 
+ * @n: the number of integers
  *
  * Return: void just print the integers
  */
