@@ -29,7 +29,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		s = va_arg(args, char *);
 		if (i < (n - 1))
 		{
-			if (*s == '\0')
+			if (s == NULL)
 				s = "(nil)";
 			printf("%s", s);
 			if (separator != NULL)
