@@ -5,7 +5,7 @@
  *
  * @h: a pointer to the header of the list
  *
- * Return: The size of the list 
+ * Return: The size of the list
  */
 
 size_t print_list(const list_t *h)
@@ -34,7 +34,7 @@ size_t print_list(const list_t *h)
 		{
 			printf("[%d] %s\n", current->len, current->str);
 		}
-		
+
 		current = current->next;
 		count++;
 	}
