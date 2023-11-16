@@ -22,13 +22,7 @@ size_t print_list(const list_t *h)
 	{
 		if (current->str == NULL)
 		{
-			output = "[0] (nil)";
-			while (*output != '\0')
-			{
-				_putchar(*output);
-				output++;
-			}
-			_putchar('\n');
+			printf("[0] (nil)");
 		}
 		else
 		{
