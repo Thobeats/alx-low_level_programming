@@ -12,7 +12,6 @@ size_t print_list(const list_t *h)
 {
 	size_t count;
 	const list_t *current;
-	char *output;
 
 	count = 0;
 
