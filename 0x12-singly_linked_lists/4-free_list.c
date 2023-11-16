@@ -11,6 +11,7 @@
 void free_list(list_t *head)
 {
 	list_t *current;
+	char *liststr;
 
 	if (head == NULL)
 	{
@@ -21,15 +22,14 @@ void free_list(list_t *head)
 	while (head->next != NULL)
 	{
 		current = head;
+		liststr = current->str;
 		head = head->next;
 		
-		free(current->str);
-		free(current->len);
+		free(liststr);
 		free(current);
 	}
 
 	free(head->str);
-	free(head->len);
 	free(head);
 }
 
