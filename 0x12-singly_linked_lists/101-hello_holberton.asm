@@ -1,17 +1,21 @@
 ; file name: 101-hello_holberton.asm
 ; -------------------------------------
 
-	global _start
+	segment .data
+		message db "Hello, Holberton", 10
 
-	section .text
-_start: mov	rax, 1
-	mov	rdi, 1
-	mov	rsi, message
-	mov	rdx, 13
-	syscall
-	mov	rax, 60
-	xor	rdi, rdi
-	syscall
+	segment .text
+	extern	printf
+	extern 	exit
 
-	section .data
-message:db	"Hello, Holberton", 10
+
+	global main
+	main:
+		mov rax, 0
+		mov rdi, message
+		call printf
+
+
+		mov rax, 0
+		mov rdi, 0
+		call exit
