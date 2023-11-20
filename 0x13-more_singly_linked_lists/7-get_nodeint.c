@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * get_nodeint - Return the nth node of the list
+ * get_nodeint_at_index - Return the nth node of the list
  *
  * @head: The head of the list
  * @index: the index of the node
@@ -17,7 +17,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 
 	if (head == NULL)
 		return (NULL);
-	
+
 	count = 0;
 	current = head;
 	while (current->next != NULL)
