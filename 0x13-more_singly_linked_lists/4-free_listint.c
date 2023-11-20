@@ -10,7 +10,13 @@ void free_listint(listint_t *head)
 {
 	listint_t *current;
 
-	if (head->next != NULL)
+	if (head == NULL)
+	{
+		free(head);
+		return;
+	}
+
+	if (head != NULL)
 	{
 		current = head;
 		head = head->next;
