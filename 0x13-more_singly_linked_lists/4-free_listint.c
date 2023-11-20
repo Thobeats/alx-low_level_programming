@@ -10,6 +10,12 @@ void free_listint(listint_t *head)
 {
 	listint_t *current;
 
+	if (head == null)
+	{
+		free(head);
+		return;
+	}
+
 	while (head != NULL)
 	{
 		current = head;
