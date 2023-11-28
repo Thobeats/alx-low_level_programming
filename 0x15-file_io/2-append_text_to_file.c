@@ -12,12 +12,11 @@
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int filecreate;
-	int size;
 	int text_count;
 
 	if (filename == NULL)
 		return (-1);
-	filecreate = open(filename, O_CREATE | O_RDWR | O_TRUNC, 0600);
+	filecreate = open(filename, O_RDWR | O_APPEND);
 	if (filecreate == -1)
 		return (-1);
 
@@ -26,10 +25,7 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	while (*text_content)
 		text_count++;
-	size = write(filecreate, text_content, text_count);
-
-	if (size < 0)
-		return (-1);
+	write(filecreate, text_content, text_count);
 	if (close(filecreate) < 0)
 		return (-1);
 	return (1);
