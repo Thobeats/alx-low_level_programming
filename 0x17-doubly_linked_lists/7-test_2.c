@@ -66,15 +66,12 @@ void _free_dlistint(dlistint_t *list)
 int main(void)
 {
 	dlistint_t *head;
-	dlistint_t *node;
+	int r;
 	size_t n;
 
-	head = _create_dlist(2, -12, 6);
-	node = insert_dnodeint_at_index(&head, 1, 98);
-	if (node)
-		printf("-> %d\n", node->n);
-	else
-		printf("(nil)\n");
+	head = _create_dlist(2, 9, 6);
+	r = delete_dnodeint_at_index(&head, 0);
+	printf("-> %d\n", r);
 	n = print_dlistint(head);
 	printf("-> %lu elements\n", n);
 	n = _print_dlistint_backward(head);
