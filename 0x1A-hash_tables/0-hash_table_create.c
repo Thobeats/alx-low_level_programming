@@ -18,13 +18,13 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return (NULL);
 	}
 	hashTable->size = size;
-	hashTable->array = malloc(sizeof(hash_table_t) * size);
+	hashTable->array = malloc(sizeof(hash_table_t*) * size);
 	if (hashTable->array == NULL)
 	{
 		free(hashTable);
 		return (NULL);
 	}
-	for (count = 0; count <= size; count++)
+	for (count = 0; count < size; count++)
 		hashTable->array[count] = NULL;
 	return (hashTable);
 }
