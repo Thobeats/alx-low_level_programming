@@ -15,14 +15,13 @@ hash_table_t *hash_table_create(unsigned long int size)
 	hashTable = malloc(sizeof(hash_table_t));
 	if (hashTable == NULL)
 	{
-		free(hashTable);
 		return (NULL);
 	}
 	hashTable->size = size;
 	hashTable->array = malloc(sizeof(hash_table_t) * size);
 	if (hashTable->array == NULL)
 	{
-		free(hashTable->array);
+		free(hashTable);
 		return (NULL);
 	}
 	for (count = 0; count <= size; count++)
