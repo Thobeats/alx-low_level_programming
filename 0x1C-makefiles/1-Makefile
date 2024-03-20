@@ -1,9 +1,7 @@
 .PHONY: all
 
 CC = gcc 		#the compiler to use
-SRC = $(wildcard *.c)   #the file source
+SRC = main.c school.c   #the file source
 
-all: school
-
-school: $(SRC)
+all: 
 	${CC} ${SRC} -o school
