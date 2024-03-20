@@ -5,5 +5,10 @@ SRC = main.c school.c   #the file source
 OBJ = $(SRC:.c=.o)   #the object files
 NAME = school		#the name of the executable
 
-all: $(OBJ)
-	${CC} ${OBJ} -o $(NAME)
+all: 	$(NAME)
+
+$(NAME): $(OBJ)
+	 ${CC} ${OBJ} -o $(NAME)
+
+%.o:	%.c
+	$(CC) -c -o $@ $<
