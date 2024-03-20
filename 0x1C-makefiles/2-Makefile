@@ -1,0 +1,9 @@
+.PHONY: all
+
+CC = gcc 		#the compiler to use
+SRC = main.c school.c   #the file source
+OBJ = $(SRC:.c=.o)   #the object files
+NAME = school		#the name of the executable
+
+all: $(OBJ)
+	${CC} ${OBJ} -o $(NAME)
