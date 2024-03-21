@@ -4,14 +4,14 @@ CC = gcc 		#the compiler to use
 SRC = main.c school.c   #the file source
 OBJ = $(SRC:%.c=%.o)	#the object files
 NAME = school		#the name of the executable
-RM = rm -f			#program to delete file
+RM = rm -f		#program to delete file
 
-
-all:	$(OBJ)
-	${CC} ${OBJ} -o $(NAME)
 
 %.o:	%.c m.h
 	$(CC) -c -o $@ $<
+
+all:	$(OBJ)
+	${CC} ${OBJ} -o $(NAME)
 
 clean: 
 	$(RM) *~ $(NAME)
