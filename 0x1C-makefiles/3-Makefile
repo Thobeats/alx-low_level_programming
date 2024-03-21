@@ -1,5 +1,3 @@
-.PHONY: clean oclean fclean re
-
 CC = gcc 		#the compiler to use
 SRC = main.c school.c   #the file source
 OBJ = $(SRC:%.c=%.o)	#the object files
@@ -12,6 +10,8 @@ RM = rm -f		#program to delete file
 
 all:	$(OBJ)
 	${CC} ${OBJ} -o $(NAME)
+
+.PHONY: clean oclean fclean re
 
 clean: 
 	$(RM) *~ $(NAME)
