@@ -1,4 +1,4 @@
-.PHONY: all
+.PHONY: clean oclean fclean re
 
 CC = gcc 		#the compiler to use
 SRC = main.c school.c   #the file source
