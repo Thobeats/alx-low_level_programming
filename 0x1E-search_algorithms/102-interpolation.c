@@ -1,5 +1,4 @@
 #include "search_algos.h"
-#include <math.h>
 /**
  * interpolation_search - function that searches for a value
  *			in a sorted array of
@@ -21,7 +20,10 @@ int interpolation_search(int *array, size_t size, int value)
 
 	while (pos < (int)size)
 	{
-		pos = (double)low + ((double)value - (double)array[low]) / ((double)array[high] - (double)array[low]) * ((double)high - (double)low);
+		pos = (double)low +
+				(((double)value - (double)array[low]) /
+				((double)array[high] - (double)array[low]) *
+				((double)high - (double)low));
 
 		if (pos < (int)size)
 		{
@@ -37,9 +39,8 @@ int interpolation_search(int *array, size_t size, int value)
 			}
 			else
 			{
-				low = pos;
+				low = pos + 1;
 			}
-
 		}
 		else
 		{
