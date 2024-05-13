@@ -20,10 +20,14 @@ int jump_search(int *array, size_t size, int value)
 
 	do
 	{
-		printf("Value checked array[%d] = [%d]\n", high, array[high]);
+		
 		if (value >= array[low] && value <= array[low + jump])
 		{
 			break;
+		}
+		else
+		{
+			printf("Value checked array[%d] = [%d]\n", high, array[high]);
 		}
 		low = high;
 		high = high + jump;
